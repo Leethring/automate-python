@@ -1,7 +1,7 @@
-import pyperclip 
+import requests
 
-pyperclip.copy("I love you")
-
-(1) - 
-(2(3)) - 
-(4   (5 ) (6) )
+res = requests.get('https://google.com/nothing')
+try:
+    res.raise_for_status()
+except Exception as exc:
+    print('There was a problem %s' % (exc))
