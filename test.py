@@ -1,7 +1,4 @@
-import requests
+import sys
 
-res = requests.get('https://google.com/nothing')
-try:
-    res.raise_for_status()
-except Exception as exc:
-    print('There was a problem %s' % (exc))
+for i in [0,1]:
+    print(sys.argv[i])
